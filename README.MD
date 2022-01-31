@@ -1,6 +1,9 @@
 
 ## DESCRIPTION:
 Build an API for rapid API
+### VERSIONS in Branches
+- MAIN(version1) : scrape article from 1 source.
+- VERSION2: Scrape articles from multiple sources.
 
 ## OUTCOME:
 to learn building API, then publish it in rapid API
