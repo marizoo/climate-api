@@ -11,69 +11,68 @@ const app = express();
 const newspapers = [
   {
     name: "cityam",
-    address:
-      "https://www.cityam.com/london-must-become-a-world-leader-on-climate-change-action/",
+    address: "https://www.cityam.com/?s=tennis",
     base: "",
   },
   {
     name: "thetimes",
-    address: "https://www.thetimes.co.uk/environment/climate-change",
+    address: "https://www.thetimes.co.uk/search?source=nav-desktop&q=tennis",
     base: "",
   },
   {
     name: "guardian",
-    address: "https://www.theguardian.com/environment/climate-crisis",
+    address: "https://www.theguardian.com/sport/tennis",
     base: "",
   },
   {
     name: "telegraph",
-    address: "https://www.telegraph.co.uk/climate-change",
+    address: "https://www.telegraph.co.uk/tennis/",
     base: "https://www.telegraph.co.uk",
   },
   {
     name: "nyt",
-    address: "https://www.nytimes.com/international/section/climate",
+    address: "https://www.nytimes.com/search?query=tennis",
     base: "",
   },
   {
     name: "latimes",
-    address: "https://www.latimes.com/environment",
+    address: "https://www.latimes.com/search?q=tennis",
     base: "",
   },
   {
     name: "smh",
-    address: "https://www.smh.com.au/environment/climate-change",
+    address: "https://www.smh.com.au/sport/tennis",
     base: "https://www.smh.com.au",
   },
   {
     name: "un",
-    address: "https://www.un.org/climatechange",
+    address: "https://www.un.org/en/site-search?query=tennis",
     base: "",
   },
   {
     name: "bbc",
-    address: "https://www.bbc.co.uk/news/science_and_environment",
+    address: "https://www.bbc.com/sport/tennis",
     base: "https://www.bbc.co.uk",
   },
   {
     name: "es",
-    address: "https://www.standard.co.uk/topic/climate-change",
+    address: "https://www.standard.co.uk/sport/tennis",
     base: "https://www.standard.co.uk",
   },
   {
     name: "sun",
-    address: "https://www.thesun.co.uk/topic/climate-change-environment/",
+    address: "https://www.thesun.co.uk/sport/tennis/",
     base: "",
   },
   {
     name: "dm",
     address:
-      "https://www.dailymail.co.uk/news/climate_change_global_warming/index.html",
+      "https://www.dailymail.co.uk/home/search.html?sel=site&searchPhrase=tennis",
     base: "",
   },
   {
     name: "nyp",
-    address: "https://nypost.com/tag/climate-change/",
+    address: "https://nypost.com/search/tennis/",
     base: "",
   },
 ];
@@ -87,7 +86,7 @@ newspapers.forEach((newspaper) => {
     const html = response.data;
     const $ = cheerio.load(html);
 
-    $('a:contains("climate")', html).each(function () {
+    $('a:contains("tennis")', html).each(function () {
       const title = $(this).text();
       const url = $(this).attr("href");
 
@@ -102,7 +101,7 @@ newspapers.forEach((newspaper) => {
 
 // and now... the CRUD
 app.get("/", (req, res) => {
-  res.json("Welcome to my Climate Change News API");
+  res.json("Welcome to my Tennis news API");
 });
 
 // get articles = create scraper tool
