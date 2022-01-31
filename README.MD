@@ -2,19 +2,24 @@
 ## DESCRIPTION:
 Build an API for rapid API
 
-## OUTCOME:
-to learn building API, then publish it in rapid API
+## VERSIONS in Branches
+
+   - MAIN(version1) : scrape article from 1 source.
+   - VERSION2: Scrape articles from multiple sources.
+   - VERSION3: Scrape Tennis articles.
+
 
 ## TECH STACKS:
 - Node.js
+- axios 
+- cheerio
+- expressjs
+- nodemon
 
 ## PROGRESS:
  
-- Progress: 0.5%
+- Progress: 100%;
 
-
-### Error Message(s):
-"xoxo"
 
 ## How to run
 `yarn install`
@@ -22,4 +27,4 @@ to learn building API, then publish it in rapid API
 
 
 ## IMAGE:
-![Screenshot of the site](./screenshots/bs-03-zoobar-600.jpg)
+![Screenshot of the site](./screenshots/xoxo.jpg)
